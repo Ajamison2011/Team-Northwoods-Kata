@@ -7,9 +7,14 @@ public class CalculateNightlyCharge {
 
 	public boolean checkStartTime(int time) {
 		
-	LocalTime localTime = LocalTime.now();
-	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-	System.out.println(localTime.format(formatter));
+		LocalTime startTimeStart = LocalTime.parse("17:00:00");
+		LocalTime endtime = LocalTime.parse("04:00:00");
+	
+				for(LocalTime startTime = LocalTime.parse("17:00:00");startTime.isAfter(startTimeStart);startTime.plusHours(1)) {
+					System.out.println(startTime);
+					
+				}
+				
 	
 		if (time >= 5) {
 			return true;
