@@ -5,17 +5,33 @@ import org.junit.Test;
 public class CalculateNightlyChargeTest {
 	
 	@Test
-	public void shouldStartNoEarlierThan5Pm() {
+	public void shouldCheckIsTimeIsAfter5Pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-		boolean result = calculate.checkTime(5);
+		boolean result = calculate.checkStartTime(5);
 		assertTrue(result);
 	}
 	
 	@Test 
-	public void shouldCheckIfTimeIsBefore5pm() {
+	public void shouldCheckIfTimeIsBefore5Pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-		boolean result = calculate.checkTime(4);
+		boolean result = calculate.checkStartTime(4);
 		assertFalse(result);
 	}
+	
+	@Test
+	public void shouldCheckIfEndTimeIsLessThan4Am() {
+		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
+		boolean result = calculate.checkEndTime(3);
+		assertTrue(result);
+	}
+	
+	@Test
+	public void shouldCheckIfEndTimeIsGreaterThan4Am() {
+		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
+		boolean result = calculate.checkEndTime(6);
+		assertFalse(result);
+	}
+	
+	
 
 }
