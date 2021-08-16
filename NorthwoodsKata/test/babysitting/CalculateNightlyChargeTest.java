@@ -36,10 +36,16 @@ public class CalculateNightlyChargeTest {
 	}
 	
 	@Test
-	public void shouldCalculatePayFromStartTimeOf5PmToBedTime() {
+	public void shouldCalculatePayFromStartTimeOf5PmToBedTimeOf9Pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
 		int result = calculate.calculateStartTimeAndBedTime(9,5,12);
 		assertEquals(48,result);
+	}
+	@Test
+	public void shouldCalculatePayFromStartTimeOf5PmToBedTimeOf8Pm() {
+		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
+		int result = calculate.calculateStartTimeAndBedTime(8,5,12);
+		assertEquals(36,result);
 	}
 	
 	@Test
@@ -63,13 +69,13 @@ public class CalculateNightlyChargeTest {
 	}
 	
 	@Test
-	public void shouldCalculatePayFromBedTimeOf9PmToMidnight() {
+	public void shouldCalculatePayFromStartTimeOf5PmFromBedTimeOf9PmToMidnight() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
 		int result = calculate.calculateBedTimeToMidnight(9,8);
 		assertEquals(24,result);
 	}
 	@Test
-	public void shouldCalculatePayFromBedTimeOf8PmToMidnight() {
+	public void shouldCalculatePayFromStartTimeOf5PmFromBedTimeOf8PmToMidnight() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
 		int result = calculate.calculateBedTimeToMidnight(8,8);
 		assertEquals(32,result);
@@ -83,7 +89,7 @@ public class CalculateNightlyChargeTest {
 	}
 	
 	@Test
-	public void shouldCalculatePayFromMidnightToEndOfJobAt2Am() {
+	public void shouldCalculatePayFromStartTimeOf5PmAndBedTimeOf8PmFromMidnightToEndOfJobAt2Am() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
 		int result = calculate.calculateMidnightToEndOfJobAt2Am(16);
 		assertEquals(32,result);
