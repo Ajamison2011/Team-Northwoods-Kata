@@ -27,5 +27,11 @@ public class CalculateNightlyCharge {
 //without knowing the bed time I'm going to assume it is 9
 		return (bedTime - startTime) * rate;
 	}
+	
+	public int calculateBedTimeToMidnight(int bedtime, int rate) {
+		
+		return bedtime * rate;
+		
+	}
 
 }

@@ -44,7 +44,9 @@ public class CalculateNightlyChargeTest {
 
 	@Test
 	public void shouldCalculatePayFromBedTimeToMidnight() {
-		fail();
+		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
+		int result = calculate.calculateBedTimeToMidnight(8,3);
+		assertEquals(24,result);
 		
 	}
 	
