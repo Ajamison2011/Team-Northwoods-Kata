@@ -1,5 +1,8 @@
 package babysitting;
 import static org.junit.Assert.*;
+
+import java.time.LocalTime;
+
 import org.junit.Test;
 
 public class CalculateNightlyChargeTest {
@@ -7,15 +10,15 @@ public class CalculateNightlyChargeTest {
 	@Test
 	public void shouldCheckIsTimeIsAfter5Pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-		boolean result = calculate.checkStartTime("");
+		boolean result = calculate.checkStartTime(LocalTime.now());
 		assertTrue(result);
 	}
 	
 	@Test 
 	public void shouldCheckIfTimeIsBefore5Pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-		boolean result = calculate.checkStartTime("");
-		assertFalse(result);
+		boolean result = calculate.checkStartTime(LocalTime.now());
+		assertFalse("Time to Start should be After 5PM",result);
 	}
 	
 	@Test

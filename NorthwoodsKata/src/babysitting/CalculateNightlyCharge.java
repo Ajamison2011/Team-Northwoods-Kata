@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class CalculateNightlyCharge {
 
-	public boolean checkStartTime(String time) {
+	public boolean checkStartTime(LocalTime time) {
 		LocalTime startTimeStart = LocalTime.parse("17:00:00");
 		LocalTime endtime = LocalTime.parse("04:00:00");
 		LocalTime userTime = LocalTime.now();
