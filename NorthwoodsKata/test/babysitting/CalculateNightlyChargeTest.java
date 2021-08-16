@@ -14,7 +14,7 @@ public class CalculateNightlyChargeTest {
 	@Test 
 	public void shouldCheckIfTimeIsBefore5pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-		boolean result = calculate.checkTime(5);
+		boolean result = calculate.checkTime(4);
 		assertFalse(result);
 	}
 
