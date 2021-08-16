@@ -11,27 +11,27 @@ public class CalculateNightlyChargeTest {
 	public void shouldCheckIsTimeIsAfter5Pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
 		boolean result = calculate.checkStartTime(LocalTime.now());
-		assertTrue(result);
+		assertTrue("Time to Start should be After 5PM", result);
 	}
 	
 	@Test 
 	public void shouldCheckIfTimeIsBefore5Pm() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
 		boolean result = calculate.checkStartTime(LocalTime.now());
-		assertFalse("Time to Start should be After 5PM",result);
+		assertFalse(result);
 	}
 	
 	@Test
 	public void shouldCheckIfEndTimeIsLessThan4Am() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-		boolean result = calculate.checkEndTime(6);
+		boolean result = calculate.checkEndTime(LocalTime.now());
 		assertTrue(result);
 	}
 	
 	@Test
 	public void shouldCheckIfEndTimeIsGreaterThan4Am() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-		boolean result = calculate.checkEndTime(3);
+		boolean result = calculate.checkEndTime(LocalTime.now());
 		assertFalse(result);
 	}
 	
