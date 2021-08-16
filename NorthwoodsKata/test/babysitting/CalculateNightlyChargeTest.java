@@ -35,6 +35,10 @@ public class CalculateNightlyChargeTest {
 		assertFalse(result);
 	}
 	
-	
+	@Test
+	public void shouldCalculatePayFromStartTimeToBedTime() {
+		fail();
+		
+	}
 
 }
