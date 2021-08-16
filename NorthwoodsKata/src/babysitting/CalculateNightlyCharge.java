@@ -30,7 +30,7 @@ public class CalculateNightlyCharge {
 	
 	public int calculateBedTimeToMidnight(int bedtime, int rate) {
 		
-		return bedtime * rate;
+		return (12 - bedtime) * rate;
 		
 	}
 
