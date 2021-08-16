@@ -23,10 +23,10 @@ public class CalculateNightlyCharge {
 		}
 	}
 
-	public int calculateStartTimeAndBedTime(int startTime,int bedTime, int rate ) {
+	public int calculateStartTimeAndBedTime(int startTime, int bedTime, int rate ) {
 //without knowing the bed time I'm going to assume it is 9
 	
-		return bedTime - startTime * rate;
+		return (bedTime - startTime) * rate;
 		
 		
 		
