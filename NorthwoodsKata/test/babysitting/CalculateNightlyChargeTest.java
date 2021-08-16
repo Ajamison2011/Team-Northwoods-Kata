@@ -78,7 +78,7 @@ public class CalculateNightlyChargeTest {
 	public void shouldCalculatePayFromStartTimeOf5PmFromBedTimeOf8PmToMidnight() {
 		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
 		int result = calculate.calculateBedTimeToMidnight(8,8);
-		assertEquals(32,result);
+		assertEquals(32,result) ;
 	}
 	
 	@Test

@@ -32,7 +32,7 @@ public class CalculateNightlyCharge {
 		return (12 - bedtime) * rate;
 	}
 
-	public int calculateMidnightToEndOfJob(int rate) {
+	public int calculateMidnightToEndOfJobAt4Am(int rate) {
 
 		// Assuming the job last until 4am
 		int total = 0;
@@ -40,8 +40,23 @@ public class CalculateNightlyCharge {
 		for(int i=0;i<=4;i++) {
 			total = i;
 		}
-		return total * rate;
-		
+		return total * rate;		
 	}
+/* The babysitter should charge a nightly rate of $136.00 assuming they started at 5 and the bed time is 
+ 9pm they stay until 4am. Now we must test for other scenarios*/
+	
+	
+	public int calculateMidnightToEndOfJobAt2Am(int rate) {
 
+		// Assuming the job last until 4am
+		int total = 0;
+		
+		for(int i=0;i<=2;i++) {
+			total = i;
+		}
+		return total * rate;		
+	} 
+	
+	/* The baby sitter should charge a nightly rate of $100.00 assuming the start time is 5 
+	 and the bedtime is 8 and they stay until 2am. */
 }
