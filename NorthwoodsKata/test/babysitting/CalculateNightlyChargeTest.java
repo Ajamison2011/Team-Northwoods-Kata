@@ -49,11 +49,11 @@ public class CalculateNightlyChargeTest {
 		assertEquals(24,result);
 	}
 	
-//	@Test
-//	public void shouldCalculatePayFromMidnightToEndOfJob() {
-//		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
-//		int result = calculate.calculateMidnightToEndOfJob(16,3);
-//		assertEquals(24,result);
-//	}
+	@Test
+	public void shouldCalculatePayFromMidnightToEndOfJob() {
+		CalculateNightlyCharge calculate = new CalculateNightlyCharge();
+		int result = calculate.calculateMidnightToEndOfJob(16);
+		assertEquals(64,result);
+	}
 	
 }
